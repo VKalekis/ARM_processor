@@ -1,0 +1,617 @@
+
+*** Running vivado
+    with args -log Processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Processor.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Processor.tcl -notrace
+Command: synth_design -top Processor -part xc7z020clg484-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24968
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1024.754 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Processor' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Processor.vhd:46]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+	Parameter REG_WIDTH bound to: 4 - type: integer 
+	Parameter N_IM bound to: 6 - type: integer 
+	Parameter N_DM bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'Datapath' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:34' bound to instance 'Datapath_instance' of component 'Datapath' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Processor.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:53]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+	Parameter REG_WIDTH bound to: 4 - type: integer 
+	Parameter N_IM bound to: 6 - type: integer 
+	Parameter N_DM bound to: 5 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'REG_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/REG_n.vhd:34' bound to instance 'PC_REG' of component 'REG_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:133]
+INFO: [Synth 8-638] synthesizing module 'REG_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/REG_n.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'REG_n' (1#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/REG_n.vhd:42]
+	Parameter N bound to: 6 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Instruction_Memory' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Instruction_Memory.vhd:37' bound to instance 'IM' of component 'Instruction_Memory' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'Instruction_Memory' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Instruction_Memory.vhd:47]
+	Parameter N bound to: 6 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Instruction_Memory' (2#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Instruction_Memory.vhd:47]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'INC4' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/INC4.vhd:34' bound to instance 'PCPlus4_INC' of component 'INC4' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'INC4' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/INC4.vhd:41]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'INC4' (3#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/INC4.vhd:41]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'RA1_Rn_or_15_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:43]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX_n' (4#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:43]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'RA2_Rm_or_Rd_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:168]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'WA_Rd_or_14_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:177]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'INC4' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/INC4.vhd:34' bound to instance 'PCPlus8_INC' of component 'INC4' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:186]
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Register_File' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File.vhd:37' bound to instance 'RegFile' of component 'Register_File' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'Register_File' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File.vhd:48]
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Register_File_internal' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File_internal.vhd:36' bound to instance 'RF_internal' of component 'Register_File_internal' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'Register_File_internal' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File_internal.vhd:48]
+	Parameter N bound to: 4 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Register_File_internal' (5#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File_internal.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'Register_File' (6#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File.vhd:48]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Extend' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Extend.vhd:34' bound to instance 'Extension' of component 'Extend' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'Extend' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Extend.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Extend' (7#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Extend.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'SrcB_RD2_or_ExtImm_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'MUX_n__parameterized2' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:43]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MUX_n__parameterized2' (7#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:43]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:34' bound to instance 'ALU_instance' of component 'ALU' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:44]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'ADD_SUB' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ADD_SUB.vhd:34' bound to instance 'ADD_SUB_instance' of component 'ADD_SUB' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'ADD_SUB' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ADD_SUB.vhd:43]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ADD_SUB' (8#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ADD_SUB.vhd:43]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'AND_XOR' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/AND_XOR.vhd:34' bound to instance 'AND_XOR_instance' of component 'AND_XOR' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'AND_XOR' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/AND_XOR.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'AND_XOR' (9#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/AND_XOR.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MOV_MVN' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MOV_MVN.vhd:34' bound to instance 'MOV_MVN_instance' of component 'MOV_MVN' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'MOV_MVN' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MOV_MVN.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MOV_MVN' (10#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MOV_MVN.vhd:42]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'LSL_ASR' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/LSL_ASR.vhd:34' bound to instance 'LSL_ASR_instance' of component 'LSL_ASR' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'LSL_ASR' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/LSL_ASR.vhd:43]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'LSL_ASR' (11#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/LSL_ASR.vhd:43]
+INFO: [Synth 8-226] default block is never used [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:118]
+WARNING: [Synth 8-614] signal 'C_inV_in' is read in the process but is not in the sensitivity list [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (12#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ALU.vhd:44]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'REG_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/REG_n.vhd:34' bound to instance 'StatusRegister' of component 'REG_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'REG_n__parameterized1' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/REG_n.vhd:42]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'REG_n__parameterized1' (12#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/REG_n.vhd:42]
+	Parameter N bound to: 5 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Data_Memory' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Data_Memory.vhd:34' bound to instance 'DM' of component 'Data_Memory' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:246]
+INFO: [Synth 8-638] synthesizing module 'Data_Memory' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Data_Memory.vhd:46]
+	Parameter N bound to: 5 - type: integer 
+	Parameter M bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Data_Memory' (13#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Data_Memory.vhd:46]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'Result_ALUResult_or_RD_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:257]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'WD3_Result_or_PCPlus4_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:266]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'MUX_n' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MUX_n.vhd:35' bound to instance 'PCN_PCPlus4_or_Result_MUX' of component 'MUX_n' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:275]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (14#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Datapath.vhd:53]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'Control' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:34' bound to instance 'Control_instance' of component 'Control' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Processor.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'Control' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:46]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'InstrDec' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/InstrDec.vhd:34' bound to instance 'InstrDec_instance' of component 'InstrDec' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'InstrDec' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/InstrDec.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'InstrDec' (15#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/InstrDec.vhd:47]
+INFO: [Synth 8-3491] module 'WELogic' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/WELogic.vhd:34' bound to instance 'WELogic_instance' of component 'WELogic' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'WELogic' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/WELogic.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'WELogic' (16#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/WELogic.vhd:46]
+INFO: [Synth 8-3491] module 'PCLogic' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/PCLogic.vhd:34' bound to instance 'PCLogic_instance' of component 'PCLogic' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'PCLogic' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/PCLogic.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'PCLogic' (17#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/PCLogic.vhd:43]
+INFO: [Synth 8-3491] module 'CONDLogic' declared at 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/CONDLogic.vhd:34' bound to instance 'CONDLogic_instance' of component 'CONDLogic' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'CONDLogic' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/CONDLogic.vhd:42]
+INFO: [Synth 8-226] default block is never used [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/CONDLogic.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'CONDLogic' (18#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/CONDLogic.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'Control' (19#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Control.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (20#1) [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Processor.vhd:46]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1024.754 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1024.754 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1024.754 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1024.754 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Processor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1059.469 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1059.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1059.469 ; gain = 34.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1059.469 ; gain = 34.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IOB = TRUE for PC[31]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[30]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[29]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[28]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[27]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[26]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[25]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[24]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[23]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[22]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[21]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[20]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[19]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[18]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[17]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[16]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[15]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[14]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[13]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[12]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[11]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[10]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[9]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[8]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[7]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[6]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[5]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[4]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[3]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[2]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[1]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for PC[0]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[31]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[30]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[29]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[28]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[27]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[26]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[25]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[24]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[23]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[22]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[21]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[20]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[19]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[18]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[17]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[16]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[15]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[14]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[13]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[12]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[11]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[10]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[9]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[8]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[7]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[6]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[5]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[4]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[3]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[2]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[1]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for Instr[0]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[31]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[30]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[29]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[28]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[27]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[26]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[25]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[24]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[23]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[22]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[21]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[20]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[19]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[18]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[17]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[16]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[15]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[14]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[13]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[12]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[11]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[10]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[9]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[8]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[7]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[6]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[5]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[4]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[3]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[2]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[1]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for ALUResult[0]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[31]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[30]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[29]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[28]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[27]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[26]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[25]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[24]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[23]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[22]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[21]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[20]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[19]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[18]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[17]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[16]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[15]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[14]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[13]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[12]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[11]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[10]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[9]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[8]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[7]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[6]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[5]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[4]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[3]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[2]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[1]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+Applied set_property IOB = TRUE for WriteData[0]. (constraint file  C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/constrs_1/new/constraints.xdc, line 35).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1059.469 ; gain = 34.715
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'RD1_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File_internal.vhd:69]
+WARNING: [Synth 8-327] inferring latch for variable 'RD2_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/Register_File_internal.vhd:72]
+WARNING: [Synth 8-327] inferring latch for variable 'S_s_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/ADD_SUB.vhd:56]
+WARNING: [Synth 8-327] inferring latch for variable 'AND_XOR_result_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/AND_XOR.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'MOV_MVN_result_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/MOV_MVN.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'LSL_ASR_result_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/LSL_ASR.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'flags_reg' [C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.srcs/sources_1/new/InstrDec.vhd:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1059.469 ; gain = 34.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   34 Bit       Adders := 1     
+	   2 Input   31 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   34 Bit        Muxes := 1     
+	  64 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 10    
+	  15 Input   10 Bit        Muxes := 2     
+	   8 Input   10 Bit        Muxes := 1     
+	   4 Input   10 Bit        Muxes := 1     
+	   3 Input    9 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	  10 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1059.469 ; gain = 34.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++--------------------------------------+------------+-----------+----------------------+----------------+
+|Module Name                           | RTL Object | Inference | Size (Depth x Width) | Primitives     | 
++--------------------------------------+------------+-----------+----------------------+----------------+
+|Datapath_instance/RegFile/RF_internal | RF_reg     | Implied   | 16 x 32              | RAM32M x 12	   | 
+|Datapath_instance/DM                  | DM_reg     | Implied   | 32 x 32              | RAM32X1S x 32	 | 
++--------------------------------------+------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1059.469 ; gain = 34.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 1063.988 ; gain = 39.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++--------------------------------------+------------+-----------+----------------------+----------------+
+|Module Name                           | RTL Object | Inference | Size (Depth x Width) | Primitives     | 
++--------------------------------------+------------+-----------+----------------------+----------------+
+|Datapath_instance/RegFile/RF_internal | RF_reg     | Implied   | 16 x 32              | RAM32M x 12	   | 
+|Datapath_instance/DM                  | DM_reg     | Implied   | 32 x 32              | RAM32X1S x 32	 | 
++--------------------------------------+------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:40 . Memory (MB): peak = 1075.164 ; gain = 50.410
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1080.828 ; gain = 56.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1080.828 ; gain = 56.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1080.828 ; gain = 56.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     7|
+|2     |CARRY4   |    33|
+|3     |LUT1     |    34|
+|4     |LUT2     |    35|
+|5     |LUT3     |   149|
+|6     |LUT4     |    49|
+|7     |LUT5     |   102|
+|8     |LUT6     |   250|
+|9     |MUXF7    |     2|
+|10    |MUXF8    |     1|
+|11    |RAM32M   |    12|
+|12    |RAM32X1S |    32|
+|13    |FDRE     |    36|
+|14    |LD       |   204|
+|15    |IBUF     |     2|
+|16    |OBUF     |   128|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1080.828 ; gain = 56.074
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1080.828 ; gain = 21.359
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1080.828 ; gain = 56.074
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1092.891 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 284 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[0] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[0] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[0] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[0] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[10] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[10] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[10] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[10] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[11] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[11] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[11] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[11] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[12] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[12] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[12] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[12] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[13] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[13] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[13] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[13] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[14] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[14] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[14] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[14] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[15] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[15] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[15] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[15] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[16] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[16] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[16] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[16] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[17] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[17] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[17] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[17] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[18] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[18] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[18] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[18] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[19] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[19] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[19] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[19] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[1] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[1] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[1] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[1] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[20] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[20] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[20] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[20] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[21] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[21] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[21] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[21] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[22] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[22] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[22] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[22] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[23] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[23] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[23] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[23] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[24] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[24] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[24] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[24] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[25] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[25] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[25] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[25] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[26] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[26] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[26] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[26] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[27] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[27] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[27] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[27] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[28] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[28] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[28] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[28] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[29] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[29] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[29] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[29] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[30] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[30] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[30] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[30] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[8] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[8] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[8] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[8] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[9] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[9] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[9] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[9] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[10] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[10] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[10] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[10] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[11] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[11] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[11] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[11] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[12] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[12] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[12] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[12] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[13] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[13] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[13] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[13] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[14] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[14] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[14] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[14] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[15] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[15] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[15] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[15] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[16] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[16] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[16] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[16] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[17] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[17] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[17] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[17] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[18] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[18] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[18] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[18] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[19] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[19] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[19] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[19] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[1] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[1] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[1] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[1] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[20] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[20] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[20] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[20] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[21] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[21] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[21] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[21] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[22] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[22] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[22] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[22] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[23] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[23] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[23] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[23] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[24] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[24] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[24] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[24] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[25] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[25] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[25] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[25] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[26] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[26] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[26] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[26] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[27] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[27] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[27] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[27] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[28] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[28] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[28] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[28] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[29] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[29] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[29] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[29] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[30] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[30] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[30] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[30] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[8] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[8] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[8] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[8] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[9] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[9] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[9] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[9] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[0] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[10] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[10] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+WARNING: [Shape Builder 18-132] Instance Datapath_instance/PC_REG/Q_reg[10] has IOB = TRUE property, but it cannot be placed in an OLOGIC site. Instance Datapath_instance/PC_REG/Q_reg[10] cannot be placed in site OLOGIC_X0Y0 because the output signal of the cell requires general routing to fabric and cells placed in OLOGIC can only be routed to delay or I/O site.
+INFO: [Common 17-14] Message 'Shape Builder 18-132' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[2] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[3] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[4] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[5] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[6] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+WARNING: [Constraints 18-5572] Instance Datapath_instance/PC_REG/Q_reg[7] has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1100.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 248 instances were transformed.
+  LD => LDCE: 204 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
+  RAM32X1S => RAM32X1S (RAMS32): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+89 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:01 . Memory (MB): peak = 1100.762 ; gain = 76.008
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Bill/Documents/master/ARM/ARM_processor_none_11/ARM_processor.runs/synth_1/Processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Processor_utilization_synth.rpt -pb Processor_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 31 21:58:12 2021...

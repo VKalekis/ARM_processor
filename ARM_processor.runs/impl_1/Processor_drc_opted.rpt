@@ -1,0 +1,845 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Mar 31 21:59:04 2021
+| Host         : DESKTOP-CM3J189 running 64-bit major release  (build 9200)
+| Command      : report_drc -file Processor_drc_opted.rpt -pb Processor_drc_opted.pb -rpx Processor_drc_opted.rpx
+| Design       : Processor
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 161
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| NSTD-1    | Critical Warning | Unspecified I/O Standard                       | 1          |
+| UCIO-1    | Critical Warning | Unconstrained Logical Port                     | 1          |
+| PLIO-8    | Warning          | Placement Constraints Check for IO constraints | 127        |
+| REQP-1617 | Warning          | use_IOB_register                               | 31         |
+| ZPS7-1    | Warning          | PS7 block required                             | 1          |
++-----------+------------------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+129 out of 130 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: ALUResult[31:0], Instr[31:0], PC[31:0], WriteData[31:0], RESET.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+129 out of 130 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: ALUResult[31:0], Instr[31:0], PC[31:0], WriteData[31:0], RESET.
+Related violations: <none>
+
+PLIO-8#1 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[0] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#2 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[10] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#3 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[11] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#4 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[12] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#5 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[13] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#6 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[14] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#7 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[15] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#8 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[16] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#9 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[17] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#10 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[18] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#11 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[19] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#12 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[1] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#13 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[20] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#14 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[21] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#15 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[22] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#16 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[23] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#17 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[24] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#18 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[25] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#19 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[26] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#20 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[27] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#21 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[28] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#22 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[29] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#23 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[2] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#24 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[30] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#25 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[31] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#26 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[3] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#27 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[4] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#28 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[5] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#29 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[6] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#30 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[7] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#31 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[8] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#32 Warning
+Placement Constraints Check for IO constraints  
+Terminal ALUResult[9] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#33 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[0] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#34 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[10] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#35 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[11] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#36 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[12] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#37 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[13] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#38 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[14] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#39 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[15] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#40 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[16] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#41 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[17] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#42 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[18] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#43 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[19] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#44 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[1] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#45 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[20] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#46 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[21] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#47 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[22] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#48 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[23] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#49 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[24] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#50 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[25] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#51 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[26] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#52 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[27] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#53 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[28] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#54 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[29] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#55 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[2] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#56 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[30] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#57 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[31] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#58 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[3] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#59 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[4] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#60 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[5] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#61 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[6] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#62 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[7] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#63 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[8] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#64 Warning
+Placement Constraints Check for IO constraints  
+Terminal Instr[9] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#65 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[0] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#66 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[10] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#67 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[11] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#68 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[12] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#69 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[13] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#70 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[14] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#71 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[15] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#72 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[16] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#73 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[17] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#74 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[18] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#75 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[19] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#76 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[1] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#77 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[20] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#78 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[21] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#79 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[22] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#80 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[23] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#81 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[24] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#82 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[25] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#83 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[26] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#84 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[27] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#85 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[28] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#86 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[29] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#87 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[2] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#88 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[30] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#89 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[3] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#90 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[4] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#91 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[5] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#92 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[6] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#93 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[7] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#94 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[8] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#95 Warning
+Placement Constraints Check for IO constraints  
+Terminal PC[9] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#96 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[0] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#97 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[10] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#98 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[11] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#99 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[12] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#100 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[13] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#101 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[14] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#102 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[15] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#103 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[16] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#104 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[17] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#105 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[18] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#106 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[19] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#107 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[1] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#108 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[20] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#109 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[21] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#110 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[22] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#111 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[23] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#112 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[24] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#113 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[25] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#114 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[26] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#115 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[27] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#116 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[28] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#117 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[29] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#118 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[2] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#119 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[30] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#120 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[31] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#121 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[3] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#122 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[4] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#123 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[5] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#124 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[6] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#125 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[7] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#126 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[8] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+PLIO-8#127 Warning
+Placement Constraints Check for IO constraints  
+Terminal WriteData[9] has IOB constraint set to TRUE, but it is either not connected to a FLOP element or the connected FLOP element could not be brought into the I/O.
+Related violations: <none>
+
+REQP-1617#1 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[0] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#2 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[10] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#3 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[11] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#4 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[12] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#5 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[13] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#6 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[14] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#7 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[15] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#8 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[16] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#9 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[17] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#10 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[18] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#11 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[19] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#12 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[1] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#13 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[20] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#14 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[21] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#15 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[22] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#16 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[23] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#17 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[24] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#18 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[25] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#19 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[26] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#20 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[27] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#21 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[28] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#22 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[29] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#23 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[2] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#24 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[30] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#25 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[3] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#26 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[4] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#27 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[5] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#28 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[6] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#29 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[7] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#30 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[8] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+REQP-1617#31 Warning
+use_IOB_register  
+The FDRE cell Datapath_instance/PC_REG/Q_reg[9] has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
